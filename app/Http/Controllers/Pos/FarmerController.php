@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Http\Controllers\Pos;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use App\Models\Farmer;
+
+class FarmerController extends Controller
+{
+    public function FarmerAll(){
+        // $farmer = Farmer::all();
+        $farmer = Farmer::latest()->get();
+
+        return view('backend.farmer.farmer_all', compact('farmers'));
+
+    } // End Method
+}
