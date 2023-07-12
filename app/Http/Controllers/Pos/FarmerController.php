@@ -10,7 +10,7 @@ class FarmerController extends Controller
 {
     public function FarmerAll(){
         // $farmer = Farmer::all();
-        $farmer = Farmer::latest()->get();
+        $farmers = Farmer::latest()->get();
 
         return view('backend.farmer.farmer_all', compact('farmers'));
 
