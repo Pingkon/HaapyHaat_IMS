@@ -15,4 +15,10 @@ class FarmerController extends Controller
         return view('backend.farmer.farmer_all', compact('farmers'));
 
     } // End Method
+
+    public function FarmerAdd(){
+
+        return view('backend.farmer.farmer_add');
+        
+    } // End Method
 }

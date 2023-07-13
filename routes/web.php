@@ -37,6 +37,8 @@ Route::controller(FarmerController::class)->group(function () {
 Route::controller(FarmerController::class)->group(function () {
     Route::get('/farmer/all', 'FarmerAll')->name('farmer.all');
 
+    Route::get('/farmer/add', 'FarmerAdd')->name('farmer.add');
+
 });
 
  
