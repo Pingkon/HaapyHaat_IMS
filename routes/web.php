@@ -7,7 +7,7 @@ use App\Http\Controllers\Pos\FarmerController;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
 
@@ -34,6 +34,10 @@ Route::controller(FarmerController::class)->group(function () {
 
 });
 
+Route::controller(FarmerController::class)->group(function () {
+    Route::get('/farmer/all', 'FarmerAll')->name('farmer.all');
+
+});
 
  
 

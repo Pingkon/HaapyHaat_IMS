@@ -2,13 +2,16 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-6">
-                                 EasyLearning © Upcube.
+                                 Copyright © 2023 Happy Haat all rights reserved.
                             </div>
                             <div class="col-sm-6">
                                 <div class="text-sm-end d-none d-sm-block">
-                                    Crafted with <i class="mdi mdi-heart text-danger"></i> by EasyLearning
+                                    A concern of <span class="logo-lg">
+                                    <img src="{{ asset('backend/assets/images/FI-LOGO.png') }}" alt="logo-dark" height="20">
+                                </span> FarmImagination
                                 </div>
                             </div>
                         </div>
                     </div>
                 </footer>
+                
