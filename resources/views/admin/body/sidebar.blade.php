@@ -12,7 +12,7 @@
                             <li class="menu-title">Menu</li>
 
                             <li>
-                                <a href="index.html" class="waves-effect">
+                                <a href="{{route('login')}}" class="waves-effect">
                                     <i class="ri-dashboard-line"></i>
                                     <span>Dashboard</span>
                                 </a>

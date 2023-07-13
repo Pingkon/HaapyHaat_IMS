@@ -23,7 +23,7 @@
             <div class="row mb-4">
                 <label for="example-text-input" class="col-sm-1 col-form-label">Farmer Name</label>
                 <div class="form-group col-sm-11">
-                    <input name="name" class="form-control" type="text">
+                    <input name="name" class="form-control" value="{{$farmer->name}}" type="text">
                 </div>
             </div>
             <!-- end row -->
@@ -32,7 +32,7 @@
             <div class="row mb-3">
                 <label for="example-text-input" class="col-sm-1 col-form-label">Farmer Mobile</label>
                 <div class="form-group col-sm-11">
-                    <input name="mobile_no" class="form-control" type="text">
+                    <input name="mobile_no" class="form-control" value="{{$farmer->mobile_no}}" type="text">
                 </div>
             </div>
             <!-- end row -->
@@ -42,7 +42,7 @@
             <div class="row mb-3">
                 <label for="example-text-input" class="col-sm-1 col-form-label">Farmer Email</label>
                 <div class="form-group col-sm-11">
-                    <input name="email" class="form-control" type="email">
+                    <input name="email" class="form-control" value="{{$farmer->email}}"type="email">
                 </div>
             </div>
             <!-- end row -->
@@ -50,7 +50,7 @@
             <div class="row mb-3">
                 <label for="example-text-input" class="col-sm-1 col-form-label">Farmer Address</label>
                 <div class="form-group col-sm-11">
-                    <input name="address" class="form-control" type="text">
+                    <input name="address" class="form-control" value="{{$farmer->address}}"type="text">
                 </div>
             </div>
             <!-- end row -->

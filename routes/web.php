@@ -39,6 +39,10 @@ Route::controller(FarmerController::class)->group(function () {
 
     Route::get('/farmer/add', 'FarmerAdd')->name('farmer.add');
 
+    Route::post('/farmer/store', 'FarmerStore')->name('farmer.store');
+
+    Route::get('/farmer/edit/{id}', 'FarmerEdit')->name('farmer.edit');
+
 });
 
  
