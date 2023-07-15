@@ -50,4 +50,26 @@ class FarmerController extends Controller
         return view('backend.farmer.farmer_edit', compact('farmer'));
 
     }// End Method
+
+    public function FarmerUpdate(Request $request){
+
+        $farmer_id = $request->id;
+
+        Farmer::findOrFail($farmer_id)->update([
+            'name' => $request->name,
+            'mobile_no' => $request->mobile_no,
+            'email' => $request->email,
+            'address' => $request->address,
+            'updated_by' => Auth::user()->id,
+            'updated_at' => Carbon::now()
+        ]);
+
+        $notification = array(
+            'message' => 'Farmer Updated Successfully', 
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('farmer.all')->with($notification);
+
+    }
 }

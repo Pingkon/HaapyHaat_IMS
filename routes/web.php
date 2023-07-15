@@ -7,7 +7,7 @@ use App\Http\Controllers\Pos\FarmerController;
 
 
 Route::get('/', function () {
-    return view('login');
+    return view('auth.login');
 });
 
 
@@ -42,6 +42,9 @@ Route::controller(FarmerController::class)->group(function () {
     Route::post('/farmer/store', 'FarmerStore')->name('farmer.store');
 
     Route::get('/farmer/edit/{id}', 'FarmerEdit')->name('farmer.edit');
+
+    Route::post('/farmer/update', 'FarmerUpdate')->name('farmer.update');
+
 
 });
 

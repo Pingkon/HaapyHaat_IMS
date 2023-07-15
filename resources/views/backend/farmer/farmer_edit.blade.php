@@ -17,8 +17,10 @@
             <h3 class="card-title">Add Farmer Page </h3><br><br>
 
 
-            <form method="post" action="{{ route('farmer.store') }}" id="myForm">
+            <form method="post" action="{{ route('farmer.update') }}" id="myForm">
                 @csrf
+
+                <input type="hidden" name="id" value="{{$farmer->id}}">
 
             <div class="row mb-4">
                 <label for="example-text-input" class="col-sm-1 col-form-label">Farmer Name</label>
@@ -58,7 +60,7 @@
 
 
         
-<input type="submit" class="btn btn-info waves-effect waves-light" value="Add Farmer">
+<input type="submit" class="btn btn-info waves-effect waves-light" value="Update Farmer">
             </form>
              
            
