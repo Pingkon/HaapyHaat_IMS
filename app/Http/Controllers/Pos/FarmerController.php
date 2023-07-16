@@ -72,4 +72,17 @@ class FarmerController extends Controller
         return redirect()->route('farmer.all')->with($notification);
 
     }
+
+    public function FarmerDelete($id){
+
+        Farmer::findOrFail($id)->delete();
+
+        $notification = array(
+            'message' => 'Farmer Deleted Successfully', 
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+
+    }
 }

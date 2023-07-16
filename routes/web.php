@@ -45,6 +45,9 @@ Route::controller(FarmerController::class)->group(function () {
 
     Route::post('/farmer/update', 'FarmerUpdate')->name('farmer.update');
 
+    Route::get('/farmer/delete/{id}', 'FarmerDelete')->name('farmer.delete');
+
+
 
 });
 
