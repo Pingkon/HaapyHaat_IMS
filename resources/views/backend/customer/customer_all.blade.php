@@ -34,7 +34,6 @@
                             <th>Sl</th>
                             <th>Name</th> 
                             <th>Mobile Number</th> 
-                            <th>Customer Image</th> 
                             <th>Email</th> 
                             <th>Address</th> 
                             <th>Action</th>
@@ -49,13 +48,12 @@
                             <td> {{ $key+1}} </td>
                             <td> {{ $item->name }} </td> 
                             <td> {{ $item->mobile_no }} </td> 
-                            <td> <img src="{{ asset($item->customer_image)}}" style="width:60px; height:50px"> </td> 
                             <td> {{ $item->email }} </td> 
                             <td> {{ $item->address }} </td>                             
                             <td>
-   <a href="{{route('farmer.edit', $item->id)}}" class="btn btn-info sm" title="Edit Data">  <i class="fas fa-edit"></i> </a>
+   <a href="{{route('customer.edit', $item->id)}}" class="btn btn-info sm" title="Edit Data">  <i class="fas fa-edit"></i> </a>
 
-     <a href="{{route('farmer.delete', $item->id)}}" class="btn btn-danger sm" title="Delete Data" id="delete">  <i class="fas fa-trash-alt"></i> </a>
+   <a href="{{ route('customer.delete',$item->id) }}" class="btn btn-danger sm" title="Delete Data" id="delete">  <i class="fas fa-trash-alt"></i> </a>
 
                             </td>
                            
