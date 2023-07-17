@@ -21,10 +21,20 @@
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <i class="ri-mail-send-line"></i>
-                                    <span>Manage Farmer</span>
+                                    <span>Manage Farmers</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('farmer.all')}}">All Farmers</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                    <i class="ri-mail-send-line"></i>
+                                    <span>Manage Customers</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="{{route('customer.all')}}">All Customers</a></li>
                                 </ul>
                             </li>
 

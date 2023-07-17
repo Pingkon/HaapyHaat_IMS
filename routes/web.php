@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Demo\DemoController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Pos\FarmerController;
+use App\Http\Controllers\Pos\CustomerController;
 
 
 Route::get('/', function () {
@@ -29,10 +30,8 @@ Route::controller(AdminController::class)->group(function () {
      
 });
 
-Route::controller(FarmerController::class)->group(function () {
-    Route::get('/farmer/all', 'FarmerAll')->name('farmer.all');
 
-});
+ // Farmer All Route 
 
 Route::controller(FarmerController::class)->group(function () {
     Route::get('/farmer/all', 'FarmerAll')->name('farmer.all');
@@ -47,13 +46,15 @@ Route::controller(FarmerController::class)->group(function () {
 
     Route::get('/farmer/delete/{id}', 'FarmerDelete')->name('farmer.delete');
 
-
-
 });
 
- 
 
+ // Customer All Route
 
+Route::controller(CustomerController::class)->group(function () {
+    Route::get('/customer/all', 'CustomerAll')->name('customer.all');
+
+});
 
 
 
