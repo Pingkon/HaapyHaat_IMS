@@ -32,7 +32,7 @@
 
     </head>
 
-    <body data-topbar="dark">
+    <body data-topbar="light">
     
     <!-- <body data-layout="horizontal" data-topbar="dark"> -->
 
