@@ -26,6 +26,9 @@
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('farmer.all')}}">All Farmers</a></li>
                                 </ul>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="{{route('farmer.add')}}">Add Farmer</a></li>
+                                </ul>
                             </li>
 
                             <li>
@@ -36,9 +39,25 @@
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('customer.all')}}">All Customers</a></li>
                                 </ul>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="{{ route('customer.add')}}">Add Customer</a></li>
+                                </ul>
                             </li>
 
                             <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                    <i class="mdi mdi-file-cabinet"></i>
+                                    <span>Manage Units</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="{{route('unit.all')}}">All Units</a></li>
+                                </ul>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="{{ route('unit.add')}}">Add Unit</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <i class="ri-layout-3-line"></i>
                                     <span>Layouts</span>
@@ -67,9 +86,9 @@
                                         </ul>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> -->
 
-                            <li class="menu-title">Pages</li>
+                            <!-- <li class="menu-title">Pages</li>
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
@@ -97,7 +116,7 @@
                                     <li><a href="pages-404.html">Error 404</a></li>
                                     <li><a href="pages-500.html">Error 500</a></li>
                                 </ul>
-                            </li>
+                            </li> -->
 
                            
 
