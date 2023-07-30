@@ -20,7 +20,7 @@ Route::controller(DemoController::class)->group(function () {
 });
 
 
- // Admin All Route 
+ // Admin All Routes
 Route::controller(AdminController::class)->group(function () {
     Route::get('/admin/logout', 'destroy')->name('admin.logout');
     Route::get('/admin/profile', 'Profile')->name('admin.profile');
@@ -33,7 +33,7 @@ Route::controller(AdminController::class)->group(function () {
 });
 
 
- // Farmer All Route 
+ // Farmer All Routes
 
 Route::controller(FarmerController::class)->group(function () {
     Route::get('/farmer/all', 'FarmerAll')->name('farmer.all');
@@ -51,7 +51,7 @@ Route::controller(FarmerController::class)->group(function () {
 });
 
 
- // Customer All Route
+ // Customer All Routes
 
 Route::controller(CustomerController::class)->group(function () {
     Route::get('/customer/all', 'CustomerAll')->name('customer.all');
@@ -64,7 +64,7 @@ Route::controller(CustomerController::class)->group(function () {
 });
 
 
- // Unit All Route
+ // Unit All Routes
 
  Route::controller(UnitController::class)->group(function () {
     Route::get('/unit/all', 'UnitAll')->name('unit.all');
@@ -77,7 +77,7 @@ Route::controller(CustomerController::class)->group(function () {
 });
 
 
-// Category All Route
+// Category All Routes
 
 Route::controller(CategoryController::class)->group(function () {
     Route::get('/category/all', 'CategoryAll')->name('category.all');
@@ -86,6 +86,18 @@ Route::controller(CategoryController::class)->group(function () {
     Route::get('/category/edit/{id}', 'CategoryEdit')->name('category.edit');
     Route::post('/category/update', 'CategoryUpdate')->name('category.update');
     Route::get('/category/delete/{id}', 'CategoryDelete')->name('category.delete');
+
+});
+
+// Product All Routes
+
+Route::controller(CategoryController::class)->group(function () {
+    Route::get('/product/all', 'ProductAll')->name('product.all');
+    // Route::get('/product/add', 'ProductAdd')->name('product.add');
+    // Route::post('/product/store', 'ProductStore')->name('product.store');
+    // Route::get('/product/edit/{id}', 'ProductEdit')->name('product.edit');
+    // Route::post('/product/update', 'ProductUpdate')->name('product.update');
+    // Route::get('/product/delete/{id}', 'ProductDelete')->name('product.delete');
 
 });
 
