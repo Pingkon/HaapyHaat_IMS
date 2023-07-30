@@ -11,34 +11,39 @@
 
         <div class="row">
             <div class="col-12">
-
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                <h4 class="card-title">Add Category Page </h4>
+                    <h4 class="card-title">Edit Category Page </h4>
 
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="javascript: void(0);">Happy Haat</a></li>
                             <li class="breadcrumb-item active">Dashboard</li>
-                            <li class="breadcrumb-item active">Add Cateogry</li>
+                            <li class="breadcrumb-item active">Edit Category</li>
                         </ol>
                     </div>
                 </div>
-
                 <div class="card">
                     <div class="card-body">
 
-                        <form method="post" action="{{ route('category.store') }}" id="myForm">
+
+
+
+                        <form method="post" action="{{ route('category.update') }}" id="myForm">
                             @csrf
 
+                            <input type="hidden" name="id" value="{{$category->id}}">
+
                             <div class="row mb-4">
-                                <label for="example-text-input" class="col-sm-1 col-form-label">Category Name</label>
+                                <label for="example-text-input" class="col-sm-1 col-form-label">category Name</label>
                                 <div class="form-group col-sm-11">
-                                    <input name="name" class="form-control" type="text">
+                                    <input name="name" class="form-control" value="{{$category->name}}" type="text">
                                 </div>
                             </div>
                             <!-- end row -->
 
-                            <input type="submit" class="btn btn-info waves-effect waves-light" value="Add Unit">
+
+
+                            <input type="submit" class="btn btn-info waves-effect waves-light" value="Update Category">
                         </form>
 
 
