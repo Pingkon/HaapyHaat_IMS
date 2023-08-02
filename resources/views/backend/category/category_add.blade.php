@@ -38,7 +38,7 @@
                             </div>
                             <!-- end row -->
 
-                            <input type="submit" class="btn btn-info waves-effect waves-light" value="Add Unit">
+                            <input type="submit" class="btn btn-info waves-effect waves-light" value="Add Category">
                         </form>
 
 
