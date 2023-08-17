@@ -8,6 +8,7 @@ use App\Http\Controllers\Pos\CustomerController;
 use App\Http\Controllers\Pos\UnitController;
 use App\Http\Controllers\Pos\CategoryController;
 use App\Http\Controllers\Pos\ProductController;
+use App\Http\Controllers\Pos\PurchaseController;
 
 
 Route::get('/', function () {
@@ -15,10 +16,10 @@ Route::get('/', function () {
 });
 
 
-Route::controller(DemoController::class)->group(function () {
-    Route::get('/about', 'Index')->name('about.page')->middleware('check');
-    Route::get('/contact', 'ContactMethod')->name('cotact.page');
-});
+// Route::controller(DemoController::class)->group(function () {
+//     Route::get('/about', 'Index')->name('about.page')->middleware('check');
+//     Route::get('/contact', 'ContactMethod')->name('cotact.page');
+// });
 
 
  // Admin All Routes
@@ -102,10 +103,14 @@ Route::controller(ProductController::class)->group(function () {
 
 });
 
+Route::controller(PurchaseController::class)->group(function () {
+    Route::get('/purchase/all', 'PurchaseAll')->name('purchase.all');
+    Route::get('/purchase/add', 'PurchaseAdd')->name('purchase.add');
+});
 
-Route::get('/dashboard', function () {
-    return view('admin.index');
-})->middleware(['auth'])->name('dashboard');
+
+Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index');
+
 
 require __DIR__.'/auth.php';
 
