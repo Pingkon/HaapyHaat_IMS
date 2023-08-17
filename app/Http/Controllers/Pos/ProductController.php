@@ -53,6 +53,54 @@ class ProductController extends Controller
         return redirect()->route('product.all')->with($notification);
         
     } // End Method
+
+    public function ProductEdit($id){
+
+        $farmer = Farmer::all();
+        $category = Category::all();
+        $unit = Unit::all();
+        $product = Product::findOrFail($id);
+        return view('backend.product.product_edit',compact('product','farmer','category','unit'));
+    } // End Method 
+
+
+
+    public function ProductUpdate(Request $request){
+
+        $product_id = $request->id;
+
+         Product::findOrFail($product_id)->update([
+
+            'name' => $request->name,
+            'farmer_id' => $request->farmer_id,
+            'unit_id' => $request->unit_id,
+            'category_id' => $request->category_id, 
+            'updated_by' => Auth::user()->id,
+            'updated_at' => Carbon::now(), 
+        ]);
+
+        $notification = array(
+            'message' => 'Product Updated Successfully', 
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('product.all')->with($notification); 
+
+
+    } 
+
+    public function ProductDelete($id){
+
+        Product::findOrFail($id)->delete();
+             $notification = array(
+             'message' => 'Product Deleted Successfully', 
+             'alert-type' => 'success'
+         );
+ 
+         return redirect()->back()->with($notification); 
+ 
+     } // End Method 
+ 
 }
 
 
