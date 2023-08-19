@@ -20,4 +20,13 @@ class PurchaseController extends Controller
         return view('backend.purchase.purchase_all', compact('allData'));
 
     }
+
+    public function PurchaseAdd(){
+
+        $farmer = Farmer::all();
+        $unit = Unit::all();
+        $category = Category::all();
+
+        return view('backend.purchase.purchase_add', compact('farmer','unit','category'));
+    }
 }
