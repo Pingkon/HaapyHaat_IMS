@@ -24,7 +24,7 @@
         <!-- end page title -->
 
         <div class="row">
-            <div class="col-xl-3 col-md-6">
+            <div class="col-xl">
                 <a href="{{route('farmer.all')}}">
                     <div class="card">
                         <div class="card-body">
@@ -44,7 +44,7 @@
                 </a>
             </div><!-- end col -->
 
-            <div class="col-xl-3 col-md-6">
+            <div class="col-xl">
                 <a href="{{route('customer.all')}}">
                     <div class="card">
                         <div class="card-body">
@@ -62,10 +62,9 @@
                         </div><!-- end cardbody -->
                     </div><!-- end card -->
                 </a>
-
             </div><!-- end col -->
 
-            <div class="col-xl-3 col-md-6">
+            <div class="col-xl">
                 <a href="{{route('product.all')}}">
                     <div class="card">
                         <div class="card-body">
@@ -82,9 +81,28 @@
                             </div>
                         </div><!-- end cardbody -->
                     </div><!-- end card -->
+                </a>
             </div><!-- end col -->
 
-
+            <div class="col-xl">
+                <a href="{{route('purchase.all')}}">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <div class="flex-grow-1">
+                                    <p class="text-truncate font-size-14 mb-2">Total Purchases</p>
+                                    <h4 class="mb-2">{{$totalProducts}}</h4>
+                                </div>
+                                <div class="avatar-sm">
+                                    <span class="avatar-title bg-light text-primary rounded-3">
+                                        <i class="mdi mdi-basket font-size-24"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div><!-- end cardbody -->
+                    </div><!-- end card -->
+                </a>
+            </div><!-- end col -->
         </div>
         <!-- end row -->
     </div>

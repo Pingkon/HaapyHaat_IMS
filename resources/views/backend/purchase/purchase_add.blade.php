@@ -88,14 +88,14 @@
                     </div>
 
                     <div class="card-body">
-                        <form method="" action="">
+                    <form method="post" action="{{ route('purchase.store') }}">
                             @csrf
                             <table class="table-sm table-bordered" width="100%" style="border-color: #ddd;">
                                 <thead>
                                     <tr>
                                         <th>Category</th>
                                         <th>Product Name </th>
-                                        <th>PSC/KG</th>
+                                        <th>PCS/KG</th>
                                         <th>Unit Price </th>
                                         <th>Description</th>
                                         <th>Total Price</th>

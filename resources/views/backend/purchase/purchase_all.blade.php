@@ -39,13 +39,15 @@
                         <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                             <thead>
                                 <tr>
-                                    <th>Sl</th>
+                                    <th width="5%">Sl</th>
                                     <th>Purchase No</th>
                                     <th>Date</th>
                                     <th>Farmer</th>
                                     <th>Category</th>
-                                    <th>Qty</th>
                                     <th>Product Name</th>
+                                    <th>Quantity</th>
+                                    <th>Unit Price</th>
+                                    <th>Total Price</th>
                                     <th>Status</th>
                                     <th>Action</th>
 
@@ -58,11 +60,13 @@
                                 <tr>
                                     <td> {{ $key+1}} </td>
                                     <td> {{ $item->purchase_no }} </td>
-                                    <td> {{ $item->date }} </td>
-                                    <td> {{ $item->farmer_id }} </td>
-                                    <td> {{ $item->category_id }} </td>
+                                    <td> {{ date('d-m-Y',strtotime($item->date)) }} </td>
+                                    <td> {{ $item['farmer']['name'] }} </td>
+                                    <td> {{ $item['category']['name'] }} </td>
+                                    <td> {{ $item['product']['name'] }} </td>
                                     <td> {{ $item->buying_qty }} </td>
-                                    <td> {{ $item->product_id }} </td>
+                                    <td> {{ $item->unit_price }} </td>
+                                    <td> {{ $item->buying_price }} </td>
                                     <td> <span class="btn btn-warning">Pending</span> </td>
                                     <td>
                                         
