@@ -25,8 +25,6 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('farmer.all')}}">All Farmers</a></li>
-                                </ul>
-                                <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('farmer.add')}}">Add Farmer</a></li>
                                 </ul>
                             </li>
@@ -38,8 +36,6 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('customer.all')}}">All Customers</a></li>
-                                </ul>
-                                <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{ route('customer.add')}}">Add Customer</a></li>
                                 </ul>
                             </li>
@@ -51,8 +47,6 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('unit.all')}}">All Units</a></li>
-                                </ul>
-                                <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{ route('unit.add')}}">Add Unit</a></li>
                                 </ul>
                             </li>
@@ -64,8 +58,6 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('category.all')}}">All Categories</a></li>
-                                </ul>
-                                <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{ route('category.add')}}">Add Category</a></li>
                                 </ul>
                             </li>
@@ -77,8 +69,6 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('product.all')}}">All Products</a></li>
-                                </ul>
-                                <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('product.add')}}">Add Product</a></li>
                                 </ul>
                             </li>
@@ -90,9 +80,8 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('purchase.all')}}">All Purchase</a></li>
-                                </ul>
-                                <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('purchase.add')}}">Add Purchase</a></li>
+                                    <li><a href="{{ route('purchase.pending') }}">Approval Purchase</a></li>
                                 </ul>
                             </li>
 
