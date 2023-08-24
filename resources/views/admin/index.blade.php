@@ -95,7 +95,7 @@
                                 </div>
                                 <div class="avatar-sm">
                                     <span class="avatar-title bg-light text-primary rounded-3">
-                                        <i class="mdi mdi-basket font-size-24"></i>
+                                        <i class="mdi mdi-cash-multiple font-size-24"></i>
                                     </span>
                                 </div>
                             </div>
