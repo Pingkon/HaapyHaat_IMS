@@ -81,7 +81,7 @@
                                     <label for="example-text-input" class="form-label" style="margin-top:43px;"> </label>
 
 
-                                    <i class="btn btn-secondary btn-rounded waves-effect waves-light fas fa-plus-circle addeventmore"> Add More</i>
+                                    <i class="btn btn-secondary btn-rounded waves-effect waves-light fas fa-plus-circle addeventmore"> Add</i>
                                 </div>
                             </div>
                         </div>
